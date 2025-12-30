@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E592E2AE2EFAF591003271FE /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E592E2AD2EFAF591003271FE /* WidgetKit.framework */; };
+		E592E2B02EFAF591003271FE /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E592E2AF2EFAF591003271FE /* SwiftUI.framework */; };
+		E592E2BF2EFAF593003271FE /* HoneyWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E592E2AB2EFAF591003271FE /* HoneyWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		E592E2882EFAEDEE003271FE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,17 +27,61 @@
 			remoteGlobalIDString = E592E2792EFAEDEC003271FE;
 			remoteInfo = Space;
 		};
+		E592E2BD2EFAF593003271FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E592E2722EFAEDEC003271FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E592E2AA2EFAF591003271FE;
+			remoteInfo = HoneyWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E592E2C42EFAF593003271FE /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E592E2BF2EFAF593003271FE /* HoneyWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E592E27A2EFAEDEC003271FE /* Space.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Space.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E592E2872EFAEDEE003271FE /* SpaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E592E2912EFAEDEE003271FE /* SpaceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E592E2AB2EFAF591003271FE /* HoneyWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HoneyWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E592E2AD2EFAF591003271FE /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		E592E2AF2EFAF591003271FE /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		E592E2C02EFAF593003271FE /* Exceptions for "HoneyWidget" folder in "HoneyWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = E592E2AA2EFAF591003271FE /* HoneyWidgetExtension */;
+		};
+		E592E3062EFEC140003271FE /* Exceptions for "Space" folder in "HoneyWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				SpaceAttributes.swift,
+			);
+			target = E592E2AA2EFAF591003271FE /* HoneyWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		E592E27C2EFAEDEC003271FE /* Space */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E592E3062EFEC140003271FE /* Exceptions for "Space" folder in "HoneyWidgetExtension" target */,
+			);
 			path = Space;
 			sourceTree = "<group>";
 		};
@@ -43,6 +93,14 @@
 		E592E2942EFAEDEE003271FE /* SpaceUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = SpaceUITests;
+			sourceTree = "<group>";
+		};
+		E592E2B12EFAF591003271FE /* HoneyWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E592E2C02EFAF593003271FE /* Exceptions for "HoneyWidget" folder in "HoneyWidgetExtension" target */,
+			);
+			path = HoneyWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -69,6 +127,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E592E2A82EFAF591003271FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E592E2B02EFAF591003271FE /* SwiftUI.framework in Frameworks */,
+				E592E2AE2EFAF591003271FE /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +145,8 @@
 				E592E27C2EFAEDEC003271FE /* Space */,
 				E592E28A2EFAEDEE003271FE /* SpaceTests */,
 				E592E2942EFAEDEE003271FE /* SpaceUITests */,
+				E592E2B12EFAF591003271FE /* HoneyWidget */,
+				E592E2AC2EFAF591003271FE /* Frameworks */,
 				E592E27B2EFAEDEC003271FE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,8 +157,18 @@
 				E592E27A2EFAEDEC003271FE /* Space.app */,
 				E592E2872EFAEDEE003271FE /* SpaceTests.xctest */,
 				E592E2912EFAEDEE003271FE /* SpaceUITests.xctest */,
+				E592E2AB2EFAF591003271FE /* HoneyWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E592E2AC2EFAF591003271FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E592E2AD2EFAF591003271FE /* WidgetKit.framework */,
+				E592E2AF2EFAF591003271FE /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,10 +181,12 @@
 				E592E2762EFAEDEC003271FE /* Sources */,
 				E592E2772EFAEDEC003271FE /* Frameworks */,
 				E592E2782EFAEDEC003271FE /* Resources */,
+				E592E2C42EFAF593003271FE /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E592E2BE2EFAF593003271FE /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				E592E27C2EFAEDEC003271FE /* Space */,
@@ -163,6 +244,28 @@
 			productReference = E592E2912EFAEDEE003271FE /* SpaceUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		E592E2AA2EFAF591003271FE /* HoneyWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E592E2C12EFAF593003271FE /* Build configuration list for PBXNativeTarget "HoneyWidgetExtension" */;
+			buildPhases = (
+				E592E2A72EFAF591003271FE /* Sources */,
+				E592E2A82EFAF591003271FE /* Frameworks */,
+				E592E2A92EFAF591003271FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				E592E2B12EFAF591003271FE /* HoneyWidget */,
+			);
+			name = HoneyWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = HoneyWidgetExtension;
+			productReference = E592E2AB2EFAF591003271FE /* HoneyWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +287,9 @@
 						CreatedOnToolsVersion = 26.2;
 						TestTargetID = E592E2792EFAEDEC003271FE;
 					};
+					E592E2AA2EFAF591003271FE = {
+						CreatedOnToolsVersion = 26.2;
+					};
 				};
 			};
 			buildConfigurationList = E592E2752EFAEDEC003271FE /* Build configuration list for PBXProject "Space" */;
@@ -203,6 +309,7 @@
 				E592E2792EFAEDEC003271FE /* Space */,
 				E592E2862EFAEDEE003271FE /* SpaceTests */,
 				E592E2902EFAEDEE003271FE /* SpaceUITests */,
+				E592E2AA2EFAF591003271FE /* HoneyWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -223,6 +330,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E592E28F2EFAEDEE003271FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E592E2A92EFAF591003271FE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,6 +367,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E592E2A72EFAF591003271FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -265,6 +386,11 @@
 			isa = PBXTargetDependency;
 			target = E592E2792EFAEDEC003271FE /* Space */;
 			targetProxy = E592E2922EFAEDEE003271FE /* PBXContainerItemProxy */;
+		};
+		E592E2BE2EFAF593003271FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E592E2AA2EFAF591003271FE /* HoneyWidgetExtension */;
+			targetProxy = E592E2BD2EFAF593003271FE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -395,8 +521,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UJ8S76AV74;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -426,8 +554,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UJ8S76AV74;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -530,6 +660,66 @@
 			};
 			name = Release;
 		};
+		E592E2C22EFAF593003271FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UJ8S76AV74;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HoneyWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HoneyWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "BOYUAN-LI.Space.HoneyWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E592E2C32EFAF593003271FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UJ8S76AV74;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HoneyWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HoneyWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "BOYUAN-LI.Space.HoneyWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -565,6 +755,15 @@
 			buildConfigurations = (
 				E592E2A22EFAEDEE003271FE /* Debug */,
 				E592E2A32EFAEDEE003271FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E592E2C12EFAF593003271FE /* Build configuration list for PBXNativeTarget "HoneyWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E592E2C22EFAF593003271FE /* Debug */,
+				E592E2C32EFAF593003271FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
