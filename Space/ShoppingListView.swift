@@ -1,7 +1,8 @@
 import SwiftUI
 import ActivityKit
 
-struct ContentView: View {
+struct ShoppingListView: View {
+    var listName: String
     // MARK: - 数据源
     // 初始为空，或者留几个默认的
     @State private var items: [Item] = [
@@ -140,3 +141,5 @@ struct ContentView: View {
         }
     }
 }
+
+
